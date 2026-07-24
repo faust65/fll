@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정</title>
+</head>
+<body>
+    <div class="cld">
+        <div class="hd">
+            <button class="pre">◀</button>
+            <h2 class="my"></h2>
+            <button class="nxt">▶</button>
+        </div>
 
+        <div class="wk">
+            <div class="">일</div>
+            <div class="">월</div>
+            <div class="">화</div>
+            <div class="">수</div>
+            <div class="">목</div>
+            <div class="">금</div>
+            <div class="">토</div>
+        </div>
+
+        <div class="ds"></div>
+    </div>
+
+    <script>
+        my=document.querySelector(".my");
+        ds=document.querySelector(".ds");
+
+        cd=new Date();
+
+        function calr() {
+            ds.innerHTML="";
+
+            year = currentDate.getFullYear();
+            month = currentDate.getMonth();
+            fd = new Date(year, month, 1).getDay();
+            dts = new Date(year, month + 1, 0).getDate();
+
+            my.innerText =`${year}년 ${month+1}월`;
+
+            for(i=0;i<fd;i++){
+                ds.innerHTML += "<div></div>";
+            }
+
+            for(i=1;i<=dts;i++){
+                div = document.createElement("div");
+                div.innerText = i;
+            }
+
+            ds.appendChild(div);
+        }
+
+        calr();
+
+        document.querySelector(".pre").onclick=()=>{
+            cd.setMonth(cd.getMonth()-1);
+            calr();
+        }     
+
+        document.querySelector(".nxt").onclick=()=>{
+            cd.setMonth(cd.getMonth()+1);
+            calr();
+        }     
+    </script>
+</body>
+</html>
