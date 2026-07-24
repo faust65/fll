@@ -53,7 +53,17 @@
         <button onclick="flll ()">세션 일정 및 현황</button>
     </div>
     <script>
-
+        function fll() {
+            fetch('/fll',{method:'POST', headers:{"Content-Type":'application/json'}})
+            .then(response => response.json())
+            .catch(error => {alert("error");})
+        }  
+        
+        function flll() {
+            fetch('/flll',{method:'POST', headers:{"Content-Type":'application/json'}})
+            .then(response => response.json())
+            .catch(error => {alert("error");})
+        }  
     </script>
 </body>
 </html>
