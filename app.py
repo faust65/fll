@@ -7,11 +7,11 @@ app=Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/fll', methods=['POST'])
+@app.route('/fll', methods=['GET'])
 def fll():
     return render_template('fll.html')
 
-@app.route('/flll', methods=['POST'])
+@app.route('/flll', methods=['GET'])
 def flll():
     return render_template('flll.html')
 
