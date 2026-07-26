@@ -27,18 +27,18 @@
     </div>
 
     <script>
-        my=document.querySelector(".my");
-        ds=document.querySelector(".ds");
+        let my=document.querySelector(".my");
+        let ds=document.querySelector(".ds");
 
-        cd=new Date();
+        let cd=new Date();
 
         function calr() {
             ds.innerHTML="";
 
-            year = currentDate.getFullYear();
-            month = currentDate.getMonth();
-            fd = new Date(year, month, 1).getDay();
-            dts = new Date(year, month + 1, 0).getDate();
+            let year = cd.getFullYear();
+            let month = cd.getMonth();
+            let fd = new Date(year, month, 1).getDay();
+            let dts = new Date(year, month + 1, 0).getDate();
 
             my.innerText =`${year}년 ${month+1}월`;
 
@@ -47,11 +47,10 @@
             }
 
             for(i=1;i<=dts;i++){
-                div = document.createElement("div");
+                let div = document.createElement("div");
                 div.innerText = i;
+                ds.appendChild(div);
             }
-
-            ds.appendChild(div);
         }
 
         calr();
