@@ -13,13 +13,16 @@
 
         .hd{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
 
         .ds{
             display: grid;
             grid-template-columns: repeat(7,1fr);
-            grid-template-rows: repeat(6,1fr);
+            grid-template-rows: repeat(6,minmax(100px, auto));
+            
         }
 
         .wk{
