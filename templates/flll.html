@@ -45,6 +45,7 @@
 
         .wk{
             display: grid;
+            place-items: center;
             grid-template-columns: repeat(7,1fr);
             margin-bottom: 50px;
             margin-left: 100px;
@@ -56,10 +57,16 @@
             background-color: rgba(255, 255, 255, 0.596);
             width: 1500px;
             height: 1000px;
+        }
+
+        .schd{
             display: grid;
             place-items: center;
             grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(10,1fr);
+        }
+
+        .scs{
+            grid-template-columns: repeat(4,1fr);
         }
     </style>
 </head>
@@ -85,17 +92,23 @@
     </div>
 
     <div class="scnr">
-        <div class="sname">시나리오명/라이터</div>
-        <div class="tname">탁 이름</div>
-        <div class="gmpl">GM/PL</div>
-        <div class="wanz">완주여부</div>
+        <div class="schd">
+            <div class="sname">시나리오명/라이터</div>
+            <div class="tname">탁 이름</div>
+            <div class="gmpl">GM/PL</div>
+            <div class="wanz">완주여부</div>
+        </div>
+
+        <div class="scs"></div>
     </div>
 
     <script>
         let my=document.querySelector(".my");
         let ds=document.querySelector(".ds");
+        let scs=document.querySelector(".scs");
 
         let cd=new Date();
+        let scsa=new Array(); // 여기 괄호에 시날명 탁명 GMPL 완주여부 순서로 입력
 
         function calr() {
             ds.innerHTML="";
@@ -114,11 +127,21 @@
             for(i=1;i<=dts;i++){
                 let div = document.createElement("div");
                 div.innerText = i;
+                // if(month+1== && i==){}
                 ds.appendChild(div);
             }
         }
 
+        function scsr() {
+            for(i=0;i<40;i++){ // 다녀온 시나리오 개수*4만큼 i 조건식
+                let div = document.createElement("div");
+                div.innerText = scsa[i];
+                scs.appendChild(div);
+            }
+        }
+
         calr();
+        scsr();
 
         document.querySelector(".pre").onclick=()=>{
             cd.setMonth(cd.getMonth()-1);
