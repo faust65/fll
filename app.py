@@ -15,6 +15,18 @@ def fll():
 def flll():
     return render_template('flll.html')
 
+@app.route('/fl', methods=['GET'])
+def flll():
+    return render_template('fl.html')
+
+@app.route('/flli', methods=['GET'])
+def flll():
+    return render_template('flli.html')
+
+@app.route('/fli', methods=['GET'])
+def flll():
+    return render_template('fli.html')
+
 if __name__ == '__main__':
 
     app.run()
