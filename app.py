@@ -16,15 +16,15 @@ def flll():
     return render_template('flll.html')
 
 @app.route('/fl', methods=['GET'])
-def flll():
+def fl():
     return render_template('fl.html')
 
 @app.route('/flli', methods=['GET'])
-def flll():
+def flli():
     return render_template('flli.html')
 
 @app.route('/fli', methods=['GET'])
-def flll():
+def fli():
     return render_template('fli.html')
 
 if __name__ == '__main__':
