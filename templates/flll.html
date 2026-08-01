@@ -136,8 +136,8 @@
 
             for(i=1;i<=dts;i++){
                 let div = document.createElement("div");
+                div.innerHTML = i;
                 if(month+1==8 && i==1){
-                    div.innerText = i;
                     div.innerHTML = "<br><p style='color: #00f; background: #fff'>엔젤 인 어스</p>";
                 }
                 ds.appendChild(div);
