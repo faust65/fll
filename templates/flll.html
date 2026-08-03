@@ -151,8 +151,12 @@
                     div.innerHTML = i+"<br><br><p>VOID</p><p>엔젤 인 어스</p>";
                 }
 
-                if(month+1==8 && (i==4 || i==10 || i==15 || i==29)){
+                if(month+1==8 && (i==10 || i==15 || i==29)){
                     div.innerHTML = i+"<br><br><p>VOID</p>";
+                }
+
+                if(month+1==8 && i==4){
+                    div.innerHTML = i+"<br><br><p>그레모리의 아이들</p><p>VOID</p>";
                 }
 
                 if(month+1==8 && i==7){
@@ -165,6 +169,10 @@
 
                 if(month+1==8 && i==8){
                     div.innerHTML = i+"<br><br><p>그바약 테플</p><p>엔젤 인 어스</p>";
+                }
+
+                if(month+1==8 && i==27){
+                    div.innerHTML = i+"<br><br><p>신 이야기</p>";
                 }
                 ds.appendChild(div);
             }
