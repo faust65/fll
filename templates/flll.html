@@ -122,7 +122,7 @@
         let scs=document.querySelector(".scs");
 
         let cd=new Date();
-        let scsa=new Array("Abyss's 3부작","거북이탁(임시)","GMHO","예정","Abyss's 3부작","에바스헌터즈","GMHO","예정","Abyss's 3부작","침수탁(임시)","GM","예정","Abyss's 3부작","야차탁(임시)","GM","예정","Abyss's 3부작","니알라토텝(임시)","GM","예정","Abyss's 3부작","출근탁(임시)","GM","예정","Abyss's 3부작","생선탁(임시)","GM","예정","Abyss's 3부작","닭새우(편의상 명칭)","PL","예정","그레모리의 아이들","그레모리의 인성들","PL","현행","그레모리의 아이들","커스타드","GM","완주","쾌도난마","칼찌탁(편의상 명칭)","PL","예정","EDIBLE","식빵탁(임시)","GMHO","예정","아스트룸의 항해사","드라우닝(임시)","GM","예정","Tempest Funeralists","부대찌개","라이터/GM","집필중","VOID","CHIz","PL","완주","똥이드","PL","완주","VOID","경시청메워(임시)","GMHO","예정","VOID","우메보시탁(임시)","GMHO","현행","우리가 정의하는 것","숨도쉬지마(임시)","GM","예정","천적의 세","오우X발밥(편의상 명칭)","PL","현행","내리쬐는 아침햇살, 스러지는 봄바람에","뜨바람","PL","현행","크립트바운드","크립바이크","PL","완주","크립트바운드","영크크","GM","예정"); 
+        let scsa=new Array("Abyss's 3부작","노틸러스","GMHO","예정","Abyss's 3부작","에바스헌터즈","GMHO","예정","Abyss's 3부작","침수탁(임시)","GM","예정","Abyss's 3부작","야차탁(임시)","GM","예정","Abyss's 3부작","니알라토텝(임시)","GM","예정","Abyss's 3부작","출근탁(임시)","GM","예정","Abyss's 3부작","생선탁(임시)","GM","예정","Abyss's 3부작","닭새우(편의상 명칭)","PL","예정","그레모리의 아이들","그레모리의 인성들","PL","현행","그레모리의 아이들","커스타드","GM","완주","쾌도난마","칼찌탁(편의상 명칭)","PL","예정","EDIBLE","식빵탁(임시)","GMHO","예정","아스트룸의 항해사","드라우닝(임시)","GM","예정","Tempest Funeralists","부대찌개","라이터/GM","집필중","VOID","CHIz","PL","완주","똥이드","PL","완주","VOID","경시청메워(임시)","GMHO","예정","VOID","우메보시탁(임시)","GMHO","현행","우리가 정의하는 것","숨도쉬지마(임시)","GM","예정","천적의 세","오우X발밥(편의상 명칭)","PL","현행","크립트바운드","크립바이크","PL","완주"); 
         // 여기 괄호에 시날명 탁명 GMPL 완주여부 순서로 입력
 
         function calr() {
@@ -143,43 +143,35 @@
                 let div = document.createElement("div");
                 div.innerText = i;
                 
-                if(month+1==8 && (i==1 || i==5 || i==19 || i==22)){
-                    div.innerHTML = i+"<br><br><p>엔젤 인 어스</p>";
+                if(month+1==9 && (i==7 || i==14 || i==21 || i==28)){
+                    div.innerHTML = i+"<br><br><p>(공개 시)에바스헌터</p>";
                 }
 
-                if(month+1==8 && i==3){
-                    div.innerHTML = i+"<br><br><p>VOID</p><p>엔젤 인 어스</p>";
+                if(month+1==9 && (i==5 || i==12 || i==19 || i==26)){
+                    div.innerHTML = i+"<br><br><p>(공개 시)어비스 5탁</p>";
                 }
 
-                if(month+1==8 && (i==10 || i==15 || i==29)){
-                    div.innerHTML = i+"<br><br><p>VOID</p>";
+                if(month+1==9 && (i==3 || i==10 || i==17 || i==24)){
+                    div.innerHTML = i+"<br><br><p>EDIBLE</p>";
                 }
 
-                if(month+1==8 && i==4){
-                    div.innerHTML = i+"<br><br><p>그레모리의 아이들</p><p>VOID</p>";
+                if(month+1==9 && (i==8 || i==15 || i==22 || i==29)){
+                    div.innerHTML = i+"<br><br><p>아스트룸의 항해사</p>";
                 }
 
-                if(month+1==8 && i==7){
-                    div.innerHTML = i+"<br><br><p>크립트바운드</p>";
+                if(month+1==9 && (i==6 || i==13 || i==20 || i==27)){
+                    div.innerHTML = i+"<br><br><p>유리가면VOID</p>";
                 }
 
-                if(month+1==8 && (i==14 || i==21 || i==28)){
+                if(month+1==9 && (i==4 || i==11 || i==18 || i==25)){
                     div.innerHTML = i+"<br><br><p>천적의 세</p>";
-                }
-
-                if(month+1==8 && i==8){
-                    div.innerHTML = i+"<br><br><p>그바약 테플</p><p>엔젤 인 어스</p>";
-                }
-
-                if(month+1==8 && i==27){
-                    div.innerHTML = i+"<br><br><p>신 이야기</p>";
                 }
                 ds.appendChild(div);
             }
         }
 
         function scsr() {
-            for(i=0;i<112;i++){ // 다녀온 시나리오 개수*4만큼 i 조건식
+            for(i=0;i<100;i++){ // 다녀온 시나리오 개수*4만큼 i 조건식
                 let div = document.createElement("div");
                 div.innerText = scsa[i];
                 scs.appendChild(div);
